@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.onelink.app.models.Red;
 import com.onelink.app.service.RedService;
 
+@CrossOrigin("*")
+@RestController
+@RequestMapping("/api/redes")
 public class RedController {
     @Autowired
     private RedService redService;
