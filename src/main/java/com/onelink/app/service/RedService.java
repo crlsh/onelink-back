@@ -11,7 +11,7 @@ import com.onelink.app.models.Red;
 import com.onelink.app.repository.RedRepo;
 
 @Service
-public class RedService {
+public class RedService implements IRedService {
   @Autowired
   RedRepo redRepo;
 
@@ -42,5 +42,17 @@ public class RedService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    @Override
+    public List<Red> search(Integer filtro) throws Exception {
+     try {
+      // List<Red> red = redRepo.findByPersonasIdpersonasContaining(filtro);        //usando metodo de JPA
+        List<Red> red = redRepo.search(filtro);                                     //usando consultas SQL
+      return red;
+     } catch (Exception e) {
+        throw new Exception(e.getMessage());      
+     }
+     
     }
 }

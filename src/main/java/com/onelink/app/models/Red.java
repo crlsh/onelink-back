@@ -1,5 +1,6 @@
 package com.onelink.app.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,18 +21,23 @@ public class Red {
     private String nombre;
     private String link;
     private String icono;
-    private int personas_idpersonas;
+    @Column(name = "personas_idpersonas")
+    private int personasIdpersonas;
 
     public Red() {
     
     }
     
-    public Red(int idredes, String nombre, String link, String icono, int personas_idpersonas) {
+    public Red(int idredes, String nombre, String link, String icono, int personasIdpersonas) {
         this.idredes = idredes;
         this.nombre = nombre;
         this.link = link;
         this.icono = icono;
-        this.personas_idpersonas = personas_idpersonas;
+        this.personasIdpersonas = personasIdpersonas;
+    }
+
+    public int getIdredes() {
+        return this.personasIdpersonas;
     }
     
 

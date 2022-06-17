@@ -37,6 +37,9 @@ public class Persona {
         this.user = user;
         this.pass = pass;
     }
+    public int getIdpersonas() {
+        return this.idpersonas;
+    }
 
     
 }

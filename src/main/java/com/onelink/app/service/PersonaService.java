@@ -11,7 +11,7 @@ import com.onelink.app.models.Persona;
 import com.onelink.app.repository.PersonaRepo;
 
 @Service
-public class PersonaService {
+public class PersonaService implements IPersonaService {
     @Autowired
     PersonaRepo personasRepo;
     
