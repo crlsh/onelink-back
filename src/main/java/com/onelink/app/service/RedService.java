@@ -15,11 +15,12 @@ public class RedService implements IRedService {
   @Autowired
   RedRepo redRepo;
 
-
+  @Override
   public List<Red> getAllRed() {
     return (List<Red>) redRepo.findAll();
   }
 
+  @Override
   public ResponseEntity <Red> getById(int id) {
     Optional<Red> red = redRepo.findById(id);
 
@@ -30,11 +31,12 @@ public class RedService implements IRedService {
     }
   }
 
-
+    @Override
     public Red save (Red red) {
         return redRepo.save(red);
     }
 
+    @Override
     public boolean delete (int id) {
         try {
             redRepo.deleteById(id);
