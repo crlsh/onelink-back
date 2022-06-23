@@ -41,4 +41,14 @@ public class PersonaService implements IPersonaService {
             return false;
         }
     }
+
+    @Override
+    public List<Persona> search(String filtro) throws Exception {
+        try {            
+              List<Persona> persona = personasRepo.search(filtro);                                     //usando consultas SQL
+            return persona;
+           } catch (Exception e) {
+              throw new Exception(e.getMessage());      
+           }
+    }
 }
