@@ -36,11 +36,6 @@ public class Red {
         this.personasIdpersonas = personasIdpersonas;
     }
 
-    public int getIdredes() {
-        return this.personasIdpersonas;
-    }
-    
-
 }
 
 

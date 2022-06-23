@@ -15,10 +15,12 @@ public class PersonaService implements IPersonaService {
     @Autowired
     PersonaRepo personasRepo;
     
+    @Override
     public List<Persona> getAllPersonas() {
         return (List<Persona>) personasRepo.findAll();
     }
 
+    @Override
     public ResponseEntity <Persona> getById(int id) {
         Optional<Persona> personas = personasRepo.findById(id);
 
@@ -29,10 +31,13 @@ public class PersonaService implements IPersonaService {
         }
            
     }
+
+    @Override
     public Persona save (Persona personas) {
         return personasRepo.save(personas);
     }
 
+    @Override
     public boolean delete (int id) {
         try {
             personasRepo.deleteById(id);
