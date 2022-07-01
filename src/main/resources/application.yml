@@ -1,0 +1,8 @@
+auth0:
+  audience: htpp://localhosto:8080
+spring:
+  security:
+    oauth2:
+        resourceserver:
+            jwt:
+                issuer-uri: https://dev-dgz1rlrx.us.auth0.com/
