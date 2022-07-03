@@ -1,8 +1,8 @@
 auth0:
-  audience: htpp://localhosto:8080
+  audience: http://API-PruebaV2.0
 spring:
   security:
     oauth2:
         resourceserver:
             jwt:
-                issuer-uri: https://dev-dgz1rlrx.us.auth0.com/
+                issuer-uri: https://dev-w7feczar.us.auth0.com/
