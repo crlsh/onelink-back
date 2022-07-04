@@ -18,4 +18,6 @@ public interface IPersonaService {
 
     List <Persona> search(String filtro) throws Exception;
 
+    /* List <?> searchPersonaRedes(Integer filtro) throws Exception; */
+
 }

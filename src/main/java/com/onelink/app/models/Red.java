@@ -18,7 +18,7 @@ public class Red {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int idredes;
-    private String nombre;
+    private String nombre_red;
     private String link;
     private String icono;
     @Column(name = "personas_idpersonas")
@@ -30,7 +30,7 @@ public class Red {
     
     public Red(int idredes, String nombre, String link, String icono, int personasIdpersonas) {
         this.idredes = idredes;
-        this.nombre = nombre;
+        this.nombre_red = nombre;
         this.link = link;
         this.icono = icono;
         this.personasIdpersonas = personasIdpersonas;

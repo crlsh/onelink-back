@@ -18,6 +18,12 @@ public interface PersonaRepo extends JpaRepository<Persona, Integer> {
         nativeQuery = true
 )
 List <Persona> search(@Param("filtro") String filtro) throws Exception;
+/* 
+@Query(
+        value = "SELECT personas.idpersonas, personas.apellido, personas.nombre, personas.correo, personas.user, redes.nombre, redes.link FROM personas LEFT JOIN redes ON idpersonas = personas_idpersonas WHERE idpersonas LIKE %:filtro%",
+        nativeQuery = true
+)
+List <?> searchPersonaRedes(@Param("filtro") Integer filtro) throws Exception; */
 
 }
 
