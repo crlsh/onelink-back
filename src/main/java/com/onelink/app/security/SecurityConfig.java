@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.oauth2.core.DelegatingOAuth2TokenValidator;
 import org.springframework.security.oauth2.core.OAuth2TokenValidator;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -19,7 +20,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .mvcMatchers("/api/public").permitAll()
+                .mvcMatchers("/api/").permitAll()
+                .antMatchers(HttpMethod.GET, "/**").permitAll()				
+				.antMatchers(HttpMethod.POST, "/**").authenticated()
+				.antMatchers(HttpMethod.PUT, "/**").authenticated()
+				.antMatchers(HttpMethod.DELETE, "/**").authenticated()
                 .mvcMatchers("/api/private").authenticated()
                 .mvcMatchers("/api/private-scoped").hasAuthority("SCOPE_read:messages")
                 .and().cors()

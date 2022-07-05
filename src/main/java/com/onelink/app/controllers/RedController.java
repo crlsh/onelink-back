@@ -37,13 +37,13 @@ public class RedController {
     return redService.getById(id);
     }
 
-    @PostMapping
-    public Red save(@Validated @RequestBody Red Red) {
-        return redService.save(Red);
+    @PostMapping("/save")
+    public Red save(@RequestBody Red red) {
+        return redService.save(red);
     }
 
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Red> update(@PathVariable(value = "id") int id, @Validated @RequestBody Red red) {
         if (id == red.getIdredes()){
             Red mute = redService.save(red);
@@ -52,7 +52,7 @@ public class RedController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Red> delete(@PathVariable int id){
         boolean ok = redService.delete(id);
         if (ok) {
