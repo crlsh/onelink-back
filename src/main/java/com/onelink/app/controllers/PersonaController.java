@@ -38,13 +38,13 @@ public class PersonaController {
     return personaService.getById(id);
     }
 
-    @PostMapping
+    @PostMapping("/save")
     public Persona save(@Validated @RequestBody Persona persona) {
         return personaService.save(persona);
     }
 
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Persona> update(@PathVariable(value = "id") int id, @Validated @RequestBody Persona persona) {
         if (id == persona.getIdpersonas()){
             Persona mute = personaService.save(persona);
@@ -53,7 +53,7 @@ public class PersonaController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Persona> delete(@PathVariable int id){
         boolean ok = personaService.delete(id);
         if (ok) {
