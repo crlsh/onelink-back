@@ -20,22 +20,22 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int idpersonas;
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private String user;
-    private String pass;
+    private String given_name;
+    private String family_name;
+    private String nickname;
+    private String picture;
+   
 
     public Persona() {
 
     }
-    public Persona(int idpersonas, String nombre, String apellido, String correo, String user, String pass) {
+    public Persona(int idpersonas, String given_name, String family_name, String nickname, String picture) {
         this.idpersonas = idpersonas;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.user = user;
-        this.pass = pass;
+        this.given_name = given_name;
+        this.family_name = family_name;
+        this.nickname = nickname;
+        this.picture = picture;
+ 
     }
       
 }

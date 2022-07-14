@@ -13,7 +13,7 @@ import com.onelink.app.models.Red;
 
 public interface RedRepo extends JpaRepository<Red, Integer> {
     
-    List <Red> findByPersonasIdpersonasContaining(Integer filtro); //usando metodo de JPA
+    //List <Red> findByPersonas_IdpersonasContaining(Integer filtro); //usando metodo de JPA
 
     /*------------------------------------------ */
     //usando consultas SQL

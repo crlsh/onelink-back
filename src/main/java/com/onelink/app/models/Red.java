@@ -22,18 +22,18 @@ public class Red {
     private String link;
     private String icono;
     @Column(name = "personas_idpersonas")
-    private int personasIdpersonas;
+    private String personas_idpersonas;
 
     public Red() {
     
     }
     
-    public Red(int idredes, String nombre, String link, String icono, int personasIdpersonas) {
+    public Red(int idredes, String nombre, String link, String icono, String personas_idpersonas) {
         this.idredes = idredes;
         this.nombre_red = nombre;
         this.link = link;
         this.icono = icono;
-        this.personasIdpersonas = personasIdpersonas;
+        this.personas_idpersonas = personas_idpersonas;
     }
 
 }
