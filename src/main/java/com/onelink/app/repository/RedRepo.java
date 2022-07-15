@@ -21,7 +21,7 @@ public interface RedRepo extends JpaRepository<Red, Integer> {
             value = "SELECT * FROM redes WHERE redes.personas_idpersonas LIKE %:filtro%",
             nativeQuery = true
     )
-    List <Red> search(@Param("filtro") Integer filtro) throws Exception;
+    List <Red> search(@Param("filtro") String filtro) throws Exception;
 
     }
 

@@ -16,7 +16,7 @@ public interface IRedService {
     
     public boolean delete (int id); 
 
-    List <Red> search(Integer filtro) throws Exception;
+    List <Red> search(String filtro) throws Exception;
 
 
 

@@ -14,7 +14,7 @@ import com.onelink.app.models.Persona;
 public interface PersonaRepo extends JpaRepository<Persona, Integer> {
 
     @Query(
-        value = "SELECT * FROM personas WHERE personas.user LIKE %:filtro%",
+        value = "SELECT * FROM personas WHERE personas.idpersonas LIKE %:filtro%",
         nativeQuery = true
 )
 List <Persona> search(@Param("filtro") String filtro) throws Exception;

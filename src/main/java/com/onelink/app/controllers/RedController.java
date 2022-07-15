@@ -63,7 +63,7 @@ public class RedController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<?> search(@RequestParam Integer filtro) {
+    public ResponseEntity<?> search(@RequestParam String filtro) {
         try {            
             return ResponseEntity.status(HttpStatus.OK).body(redService.search(filtro));
         } catch (Exception e) {

@@ -47,7 +47,7 @@ public class RedService implements IRedService {
     }
 
     @Override
-    public List<Red> search(Integer filtro) throws Exception {
+    public List<Red> search(String filtro) throws Exception {
      try {
       // List<Red> red = redRepo.findByPersonasIdpersonasContaining(filtro);        //usando metodo de JPA
         List<Red> red = redRepo.search(filtro);                                     //usando consultas SQL

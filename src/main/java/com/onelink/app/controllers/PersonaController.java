@@ -45,7 +45,7 @@ public class PersonaController {
 
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Persona> update(@PathVariable(value = "id") int id, @Validated @RequestBody Persona persona) {
+    public ResponseEntity<Persona> update(@PathVariable(value = "id") String id, @Validated @RequestBody Persona persona) {
         if (id == persona.getIdpersonas()){
             Persona mute = personaService.save(persona);
             return ResponseEntity.ok().body(mute);

@@ -19,7 +19,7 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int idpersonas;
+    private String idpersonas;
     private String given_name;
     private String family_name;
     private String nickname;
@@ -29,7 +29,7 @@ public class Persona {
     public Persona() {
 
     }
-    public Persona(int idpersonas, String given_name, String family_name, String nickname, String picture) {
+    public Persona(String idpersonas, String given_name, String family_name, String nickname, String picture) {
         this.idpersonas = idpersonas;
         this.given_name = given_name;
         this.family_name = family_name;
