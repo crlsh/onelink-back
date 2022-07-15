@@ -81,5 +81,14 @@ public class PersonaController {
         }
     } */
 
+    @GetMapping("/searchBynickname")
+    public ResponseEntity<?> searchBynickname(@RequestParam String filtro) {
+        try {            
+            return ResponseEntity.status(HttpStatus.OK).body(personaService.searchBynickname(filtro));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
+        }
+    }
+
 
 }

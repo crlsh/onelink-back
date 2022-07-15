@@ -17,6 +17,8 @@ public interface IPersonaService {
     public boolean delete (int id); 
 
     List <Persona> search(String filtro) throws Exception;
+    
+    List <Persona> searchBynickname(String filtro) throws Exception;
 
     /* List <?> searchPersonaRedes(Integer filtro) throws Exception; */
 

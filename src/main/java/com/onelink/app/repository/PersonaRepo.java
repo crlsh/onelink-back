@@ -24,6 +24,11 @@ List <Persona> search(@Param("filtro") String filtro) throws Exception;
         nativeQuery = true
 )
 List <?> searchPersonaRedes(@Param("filtro") Integer filtro) throws Exception; */
+@Query(
+        value = "SELECT * FROM personas WHERE personas.nickname LIKE %:filtro%",
+        nativeQuery = true
+)
+List <Persona> searchBynickname(@Param("filtro") String filtro) throws Exception;
 
 }
 

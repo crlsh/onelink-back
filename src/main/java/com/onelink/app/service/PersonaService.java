@@ -57,6 +57,16 @@ public class PersonaService implements IPersonaService {
            }
     }
 
+    @Override
+    public List<Persona> searchBynickname(String filtro) throws Exception {
+        try {            
+            List<Persona> persona = personasRepo.searchBynickname(filtro);                                     //usando consultas SQL
+          return persona;
+         } catch (Exception e) {
+            throw new Exception(e.getMessage());      
+         }
+    }
+
     /* @Override
     public List<?> searchPersonaRedes(Integer filtro) throws Exception {
         try {            
