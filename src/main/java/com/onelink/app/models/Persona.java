@@ -24,17 +24,27 @@ public class Persona {
     private String family_name;
     private String nickname;
     private String picture;
+    private String descripcion;
+    private String imagen_fondo;
    
 
     public Persona() {
 
     }
-    public Persona(String idpersonas, String given_name, String family_name, String nickname, String picture) {
+    public Persona(String idpersonas, 
+                   String given_name, 
+                   String family_name, 
+                   String nickname, 
+                   String picture,
+                   String descripcion,
+                   String imagen_fondo) {
         this.idpersonas = idpersonas;
         this.given_name = given_name;
         this.family_name = family_name;
         this.nickname = nickname;
         this.picture = picture;
+        this.descripcion = descripcion;
+        this.imagen_fondo = imagen_fondo;
  
     }
       
