@@ -16,7 +16,7 @@ import lombok.Setter;
 
 
 public class Persona {
-    @Id
+    
     /* @GeneratedValue(strategy = GenerationType.IDENTITY) */
 
     private String idpersonas;
@@ -26,6 +26,7 @@ public class Persona {
     private String picture;
     private String descripcion;
     private String imagen_fondo;
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
    
