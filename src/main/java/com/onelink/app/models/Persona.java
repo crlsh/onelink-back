@@ -26,6 +26,8 @@ public class Persona {
     private String picture;
     private String descripcion;
     private String imagen_fondo;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
    
 
     public Persona() {
@@ -37,7 +39,8 @@ public class Persona {
                    String nickname, 
                    String picture,
                    String descripcion,
-                   String imagen_fondo) {
+                   String imagen_fondo,
+                   int id) {
         this.idpersonas = idpersonas;
         this.given_name = given_name;
         this.family_name = family_name;
@@ -45,6 +48,7 @@ public class Persona {
         this.picture = picture;
         this.descripcion = descripcion;
         this.imagen_fondo = imagen_fondo;
+        this.id = id;
  
     }
       
